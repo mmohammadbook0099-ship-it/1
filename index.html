@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>لعبة ليدو</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎲</text></svg>">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h1>🎲 لعبة ليدو</h1>
+            <div class="status-bar">
+                <span id="turnIndicator">دور اللاعب: <b>الأحمر</b></span>
+            </div>
+        </header>
+
+        <main class="game-area">
+            <div class="players-panel">
+                <div class="player-card red active" data-player="red">
+                    <span class="dot red-dot"></span>
+                    <span class="name">الأحمر</span>
+                    <span class="pieces-info" id="redPieces">0/4</span>
+                </div>
+                <div class="player-card green" data-player="green">
+                    <span class="dot green-dot"></span>
+                    <span class="name">الأخضر</span>
+                    <span class="pieces-info" id="greenPieces">0/4</span>
+                </div>
+                <div class="player-card yellow" data-player="yellow">
+                    <span class="dot yellow-dot"></span>
+                    <span class="name">الأصفر</span>
+                    <span class="pieces-info" id="yellowPieces">0/4</span>
+                </div>
+                <div class="player-card blue" data-player="blue">
+                    <span class="dot blue-dot"></span>
+                    <span class="name">الأزرق</span>
+                    <span class="pieces-info" id="bluePieces">0/4</span>
+                </div>
+            </div>
+
+            <div class="board-container">
+                <div class="board" id="board"></div>
+            </div>
+
+            <div class="controls">
+                <button id="rollBtn" class="roll-btn">🎲 ارمِ النرد</button>
+                <div class="dice-display" id="diceDisplay">-</div>
+                <button id="newGameBtn" class="new-game-btn">🔄 لعبة جديدة</button>
+            </div>
+        </main>
+
+        <div class="message-box" id="messageBox"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
